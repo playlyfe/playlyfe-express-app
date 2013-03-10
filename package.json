@@ -1,0 +1,29 @@
+{
+  "name": "playlyfe-express-app",
+  "version": "v0.0.1",
+  "description": "Barebone express skeleton for building a playlyfe application.",
+  "keywords": ["express", "playlyfe", "oauth"],
+  "homepage": "http://dev.playlyfe.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/playlyfe/playlyfe-express-app.git"
+  },
+  "bugs": {
+    "url": "http://github.com/playlyfe/playlyfe-express-app/issues"
+  },
+  "author": {
+    "name": "Johny Jose",
+    "email": "johny@playlyfe.com",
+    "url": "http://blog.playlyfe.com"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  }],
+  "dependencies": {
+    "express": "3.x",
+    "passport": "*",
+    "passport-oauth": "*",
+    "playlyfe-passport-oauth": "*"
+  }
+}
