@@ -23,7 +23,8 @@
   "dependencies": {
     "express": "3.x",
     "passport": "*",
-    "passport-oauth": "*",
-    "playlyfe-passport-oauth": "*"
+    "passport-playlyfe": "*",
+    "playlyfe-node-sdk": "*",
+    "connect-redis": "*"
   }
 }
