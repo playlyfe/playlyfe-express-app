@@ -15,20 +15,20 @@ app = express();
 app.set('domain', 'games.playlyfe.com');
 app.use(express.logger('dev'));
 app.use(express.json());
-app.use(express.cookieParser());
+app.use(express.cookieParser('pomo'));
 app.use(express.session({
+  key: 'pomodoro.sess',
   domain: { path: '/pomodoro' },
-  secret: 'playlyfe',
-  store: new RedisStore({ db: 1 })
+  store: new RedisStore({ db: 1 }),
+  maxAge: 8 * 60 * 60 * 1000
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 
 // use playlyfe middleware
-
 app.use(new Playlyfe(config).connect());
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public', { maxAge: 86400 } ));
 app.use(app.router);
 app.use(express.errorHandler({
   dumpException: true,
