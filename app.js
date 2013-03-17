@@ -28,7 +28,7 @@ app.use(passport.session());
 // use playlyfe middleware
 app.use(new Playlyfe(config).connect());
 
-app.use(express.static(__dirname + '/public', { maxAge: 86400 } ));
+app.use(express.static(__dirname + '/public', { maxAge: 86400000 } ));
 app.use(app.router);
 app.use(express.errorHandler({
   dumpException: true,
